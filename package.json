@@ -3,15 +3,16 @@
   "//2": "https://docs.npmjs.com/files/package.json",
   "//3": "updating this file will download and update your packages",
 
-  "name": "my-gomix-app",
+  "name": "little-jury",
   "version": "0.0.1",
-  "description": "What am I about?",
+  "description": "Test API integration of Chatfuel JSON API?",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "^4.14.0"
+    "express": "^4.14.0",
+    "lodash": "^4.17.2"
   },
   "engines": {
     "node": "6.9.1"

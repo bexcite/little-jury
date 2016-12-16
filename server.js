@@ -6,6 +6,8 @@ var express = require('express');
 var app = express();
 var extend = require('util')._extend;
 
+console.log('hello here 123')
+
 // we've started you off with Express, 
 // but feel free to use whatever libs or frameworks you'd like through `package.json`.
 
@@ -17,24 +19,20 @@ app.get("/", function (request, response) {
   response.sendFile(__dirname + '/views/index.html');
 });
 
+require('./endpoints.js')(app)
+
+
+// =========================================
+// Gomix Example Below
+// =========================================
+
+app.get("/dream", function (request, response) {
+  response.sendFile(__dirname + '/views/dream.html');
+});
+
 app.get("/dreams", function (request, response) {
   response.send(dreams);
 });
-
-
-
-
-app.get("/stores", function (request, response) {
-  var testStores = {
-     "messages": [
-       {"text": "Welcome to our store!"},
-       {"text": "How can I help you?"}
-     ]
-  };
-  testStores.messages.push({text: "ZipCode = " + request.query.zipcode});
-  response.send(testStores);
-});
-
 
 
 // could also use the POST body instead of query string: http://expressjs.com/en/api.html#req.body
