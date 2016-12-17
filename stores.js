@@ -11,6 +11,7 @@ stores = [
     phone: "+14153991606",
     directions_url: "https://www.google.com/maps/dir//3251+20th+Ave,+San+Francisco,+CA+94132/@37.7278702,-122.4792706,17z/data=!4m16!1m7!3m6!1s0x808f7dba6153f4ff:0x68c22264d2d4b12d!2s3251+20th+Ave,+San+Francisco,+CA+94132!3b1!8m2!3d37.7278702!4d-122.4770819!4m7!1m0!1m5!1m1!1s0x808f7dba6153f4ff:0x68c22264d2d4b12d!2m2!1d-122.4770819!2d37.7278702"
   },
+  
   {
     name: "SUNGLASS HUT AT MACY'S, UNION SQUARE-MACY'S MENS FLAGSHIP",
     calc_distance: "0.35 Miles",
@@ -20,6 +21,7 @@ stores = [
     phone: "+14153991606",
     directions_url: "https://www.google.com/maps/dir//3251+20th+Ave,+San+Francisco,+CA+94132/@37.7278702,-122.4792706,17z/data=!4m16!1m7!3m6!1s0x808f7dba6153f4ff:0x68c22264d2d4b12d!2s3251+20th+Ave,+San+Francisco,+CA+94132!3b1!8m2!3d37.7278702!4d-122.4770819!4m7!1m0!1m5!1m1!1s0x808f7dba6153f4ff:0x68c22264d2d4b12d!2m2!1d-122.4770819!2d37.7278702"
   },
+  
   {
     name: "SUNGLASS HUT AT MACY'S, UNION SQUARE-MACY'S FLAGSHIP",
     calc_distance: "0.37 Miles",
@@ -29,6 +31,7 @@ stores = [
     phone: "+14153991606",
     directions_url: "https://www.google.com/maps/dir//3251+20th+Ave,+San+Francisco,+CA+94132/@37.7278702,-122.4792706,17z/data=!4m16!1m7!3m6!1s0x808f7dba6153f4ff:0x68c22264d2d4b12d!2s3251+20th+Ave,+San+Francisco,+CA+94132!3b1!8m2!3d37.7278702!4d-122.4770819!4m7!1m0!1m5!1m1!1s0x808f7dba6153f4ff:0x68c22264d2d4b12d!2m2!1d-122.4770819!2d37.7278702"
   },
+  
   {
     name: "SUNGLASS HUT, POWELL ST",
     calc_distance: "0.43 Miles",
@@ -38,6 +41,7 @@ stores = [
     phone: "+14153991606",
     directions_url: "https://www.google.com/maps/dir//3251+20th+Ave,+San+Francisco,+CA+94132/@37.7278702,-122.4792706,17z/data=!4m16!1m7!3m6!1s0x808f7dba6153f4ff:0x68c22264d2d4b12d!2s3251+20th+Ave,+San+Francisco,+CA+94132!3b1!8m2!3d37.7278702!4d-122.4770819!4m7!1m0!1m5!1m1!1s0x808f7dba6153f4ff:0x68c22264d2d4b12d!2m2!1d-122.4770819!2d37.7278702"
   },
+  
   {
     name: "SUNGLASS HUT, SAN FRANCISCO CENTRE",
     calc_distance: "0.48 Miles",

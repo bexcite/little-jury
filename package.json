@@ -12,7 +12,8 @@
   },
   "dependencies": {
     "express": "^4.14.0",
-    "lodash": "^4.17.2"
+    "lodash": "^4.17.2",
+    "superagent": "^3.3.0"
   },
   "engines": {
     "node": "6.9.1"
