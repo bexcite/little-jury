@@ -79,7 +79,6 @@ make_generic_message = (elems) => {
 
 make_text_message = (texts) => {
   txt = lo.map(texts, (text) => {return {text: text}})
-  // console.log('txt =', txt)
   return {
     messages: txt
   }
@@ -106,24 +105,8 @@ module.exports = (app) => {
     
     storesMessage = make_generic_message(storesElements)
     
-    // storesMessage = {
-    //   "messages": [
-    //     {
-    //       "attachment":{
-    //         "type":"template",
-    //         "payload":{
-    //           "template_type":"generic",
-    //           "elements": storesElements
-    //         }
-    //       }
-    //     }
-    //   ]
-    // }
-    
     console.log(storesMessage)
     
-    // var testStores = JSON.parse(JSON.stringify(stores[0]));
-    // testStores.messages.push({text: "ZipCode = " + request.query.zipcode});
     response.send(storesMessage);
   });
   
@@ -148,8 +131,6 @@ module.exports = (app) => {
 
     console.log(resultsMessages)
     
-    // var testStores = JSON.parse(JSON.stringify(stores[0]));
-    // testStores.messages.push({text: "ZipCode = " + request.query.zipcode});
     response.send(resultsMessages);
   });
   
@@ -160,26 +141,15 @@ module.exports = (app) => {
     query = request.query.faq_q
     console.log("faq_q = ", query)
     
-    /*
-POST /knowledgebases/331317f3-3a40-42c3-967d-3a4b404a238d/generateAnswer
-Host: https://westus.api.cognitive.microsoft.com/qnamaker/v1.0
-Ocp-Apim-Subscription-Key: 6ea0ac65343c4c66a8640dbaeb4f266d
-Content-Type: application/json
-{"question":"hi"}
-*/
-    
     superagent
        .post('https://westus.api.cognitive.microsoft.com/qnamaker/v1.0/knowledgebases/331317f3-3a40-42c3-967d-3a4b404a238d/generateAnswer')
        .send({ question: query })
-      // .set('Host', 'https://westus.api.cognitive.microsoft.com/qnamaker/v1.0')
-       .set('Ocp-Apim-Subscription-Key', '6ea0ac65343c4c66a8640dbaeb4f266d')
+       .set('Ocp-Apim-Subscription-Key', process.env.QA_SECRET)
        .set('Content-Type', 'application/json')
        .end(function(err, res) {
          if (err || !res.ok) {
-          // alert('Oh no! error');
            response.send({answer: "Oh no! error = " + err + ", " + JSON.stringify(res)});
          } else {
-          // alert('yay got ' + JSON.stringify(res.body));
            console.log("res.body =", res.body)
            texts = [res.body.answer, "Score: " + res.body.score]
            console.log("texts =", texts)
@@ -188,25 +158,6 @@ Content-Type: application/json
            response.send(textMessage);
          }
        });
-    
-    /*
-    productsElements = lo.map(products.hot, (elem) => {
-      return make_product_element(
-        elem.title,
-        elem.subtitle,
-        elem.image_url,
-        elem.web_url
-      )
-    })
-    
-    resultsMessages = make_generic_message(productsElements)
-
-    console.log(resultsMessages)
-    
-    */
-    
-    // var testStores = JSON.parse(JSON.stringify(stores[0]));
-    // testStores.messages.push({text: "ZipCode = " + request.query.zipcode});
     
   });
 
